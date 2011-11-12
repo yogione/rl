@@ -2,13 +2,29 @@
 <html>
 <head>
   <title>Rl</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag 'application.css' %>
+  <%= stylesheet_link_tag 'bootstrap.css' %>
+  <%= javascript_include_tag 'application.js' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div class="topbar">
+    <div class="fill">
+        <div class="container">
+            <h3><a href="#">food food food</a></h3>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">dummy1</a></li>
+                <li><a href="#">dummy2</a></li>
+                <li><a href="#">dummy3</a></li>
+          </ul>
+          </div>
+    </div>
+</div>
 
 <%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
 </body>
 </html>

@@ -1,1 +1,22 @@
 rails g scaffold Menu title:string description:string photo_file_name:string price:float available_today:boolean
+
+
+padthai
+grilled cheese sandwiches
+samosa + chutney
+lasagna
+pasta + meat balls
+ministrone soup 
+maggi
+sub sandwich 
+garlic bread
+naan + mater paneer
+taco/burrito
+hot chocolate
+lemonade
+coffee
+juice n water n milk
+chai
+
+
+mango ice cream

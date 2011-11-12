@@ -1,27 +1,22 @@
 <h1>Listing menus</h1>
 
-<table>
+<table class="zebra-striped">
   <tr>
     <th>Title</th>
     <th>Description</th>
     <th>Photo file name</th>
     <th>Price</th>
     <th>Available today</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @menus.each do |menu| %>
   <tr>
+    <td><%= image_tag( menu.photo_file_name, :size=>"80x80") %></td>
     <td><%= menu.title %></td>
     <td><%= menu.description %></td>
     <td><%= menu.photo_file_name %></td>
     <td><%= menu.price %></td>
     <td><%= menu.available_today %></td>
-    <td><%= link_to 'Show', menu %></td>
-    <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
-    <td><%= link_to 'Destroy', menu, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
