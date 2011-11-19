@@ -1,6 +1,11 @@
 Rl::Application.routes.draw do
   devise_for :users
-
+  
+  devise_scope :user do
+ # get "register"  => "devise/registrations#new" 
+  #get "login"  => "devise/sessions#new"    
+  get "logout" => "devise/sessions#destroy"
+end 
   resources :menus
 
   root :to => "menus#index"
