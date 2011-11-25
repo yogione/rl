@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111109022734) do
+ActiveRecord::Schema.define(:version => 20111120013731) do
 
   create_table "menus", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,24 @@ ActiveRecord::Schema.define(:version => 20111109022734) do
     t.string   "photo_file_name"
     t.float    "price"
     t.boolean  "available_today"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "menu_id"
+    t.string   "delivery_location"
+    t.string   "delivery_sub_location"
+    t.datetime "delivery_time"
+    t.string   "status"
+    t.string   "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sponsors", :force => true do |t|
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -12,7 +12,9 @@
   <tr>
     <td><%= image_tag( menu.photo_file_name, :size=>"80x80") %><br/>
     <%= menu.title %></td>
-    <td><%= menu.description %> </td><td><%=button_tag "Order", :class=>"btn primary large" %></td>
+    <td><%= menu.description %> </td>
+     <!--<td><%=button_tag "Order", :class=>"btn primary large" %></td> -->
+    <td> <%= button_to 'Add to Cart', orders_path(menu_id: menu, user_id: current_user), :class=>"btn primary large" %> </td>
     <td><%= menu.price %></td>
   </tr>
 <% end %>

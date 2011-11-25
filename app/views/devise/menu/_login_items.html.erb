@@ -1,5 +1,8 @@
 <% if user_signed_in? %>
   <li>
+  <%= current_user.email %>        
+  </li>
+  <li>
   <%= link_to('Logout', logout_path, :method => :delete) %>        
   </li>
 <% else %>
