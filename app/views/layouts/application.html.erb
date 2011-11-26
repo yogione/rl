@@ -14,7 +14,9 @@
             <h3><a href="">roti lady</a></h3>
             <ul>
                 <li class="active"><a href="#">Home</a></li>
+                <% if current_user.try(:admin?) %>
                 <li><a href="<%= orders_path %>">Orders</a></li>
+                <% end %>
                 <li><a href="#">dummy2</a></li>
                 <li><a href="#">dummy3</a></li>
           </ul>

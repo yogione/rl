@@ -1,4 +1,6 @@
 Rl::Application.routes.draw do
+  devise_for :admins
+
   resources :sponsors
 
   resources :orders
